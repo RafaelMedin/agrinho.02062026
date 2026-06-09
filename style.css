@@ -1,0 +1,325 @@
+/* ================= RESET ================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:#f4fff4;
+    color:#333;
+}
+
+/* ================= HEADER ================= */
+header{
+    background:linear-gradient(90deg,#1b5e20,#43a047,#81c784);
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:bold;
+    color:white;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#fff176;
+}
+
+/* ================= HERO ================= */
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+    url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content{
+    animation:aparecer 1.5s ease;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.3rem;
+    max-width:800px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 35px;
+    background:#ffeb3b;
+    color:#1b5e20;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:bold;
+    animation:pulsar 2s infinite;
+    transition:.4s;
+}
+
+.btn:hover{
+    background:white;
+    transform:scale(1.1);
+}
+
+/* ================= SOBRE ================= */
+.sobre{
+    padding:100px 10%;
+    text-align:center;
+}
+
+.sobre h2{
+    color:#2e7d32;
+    margin-bottom:20px;
+}
+
+/* ================= BENEFÍCIOS ================= */
+.beneficios{
+    padding:100px 10%;
+    background:linear-gradient(180deg,#e8f5e9,#ffffff);
+}
+
+.beneficios h2{
+    text-align:center;
+    margin-bottom:50px;
+    color:#2e7d32;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:300px;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    transition:.5s;
+}
+
+.card:hover{
+    transform:translateY(-15px) scale(1.05);
+    box-shadow:0 15px 30px rgba(0,0,0,0.25);
+}
+
+.card span{
+    font-size:3rem;
+}
+
+.card h3{
+    margin:15px 0;
+    color:#2e7d32;
+}
+
+/* ================= TIMELINE ================= */
+.timeline{
+    padding:80px 10%;
+    background:#f1f8f1;
+    text-align:center;
+}
+
+.timeline h2{
+    margin-bottom:40px;
+    color:#2e7d32;
+}
+
+.linha{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    gap:30px;
+    font-size:1.1rem;
+}
+
+/* ================= GALERIA ================= */
+.galeria{
+    padding:100px 10%;
+    text-align:center;
+}
+
+.galeria h2{
+    margin-bottom:40px;
+    color:#2e7d32;
+}
+
+.imagens{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.imagens img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:.5s;
+    cursor:pointer;
+}
+
+.imagens img:hover{
+    transform:scale(1.05);
+}
+
+/* ================= DEPOIMENTOS ================= */
+.depoimentos{
+    padding:80px 10%;
+    text-align:center;
+    background:#e8f5e9;
+}
+
+.depoimentos h2{
+    color:#2e7d32;
+    margin-bottom:30px;
+}
+
+.depoimentos blockquote{
+    font-style:italic;
+    font-size:1.2rem;
+    max-width:800px;
+    margin:0 auto;
+    color:#1b5e20;
+}
+
+/* ================= CONTATO ================= */
+.contato{
+    padding:100px 10%;
+    text-align:center;
+}
+
+.contato h2{
+    margin-bottom:40px;
+    color:#2e7d32;
+}
+
+.contato form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    max-width:600px;
+    margin:0 auto;
+}
+
+.contato input,
+.contato textarea{
+    padding:15px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    font-size:1rem;
+    resize:none;
+}
+
+.contato button{
+    padding:15px;
+    border-radius:50px;
+    border:none;
+    background:#2e7d32;
+    color:white;
+    font-weight:bold;
+    font-size:1rem;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.contato button:hover{
+    background:#66bb6a;
+    transform:scale(1.05);
+}
+
+/* ================= RODAPÉ ================= */
+footer{
+    background:#1b1b1b;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+/* ================= ANIMAÇÕES ================= */
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes pulsar{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.08);}
+    100%{transform:scale(1);}
+}
+
+/* ================= RESPONSIVO ================= */
+@media(max-width:768px){
+    header{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    nav ul{
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+    .cards{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .linha{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .imagens{
+        grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    }
+}
